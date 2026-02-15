@@ -21,7 +21,7 @@ export function CountdownItem({
         shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]
         ${isSmall 
           ? "w-[60px] md:w-[70px] p-3" 
-          : "w-[80px] md:w-[120px] p-4"}
+          : "w-[70px] md:w-[120px] p-4"}
       `}
     >
       <span
@@ -31,7 +31,7 @@ export function CountdownItem({
           bg-clip-text text-transparent
           ${isSmall 
             ? "text-2xl md:text-2xl" 
-            : "text-4xl md:text-6xl"}
+            : "text-3xl md:text-6xl"}
         `}
       >
         {value.toString().padStart(2, "0")}
@@ -40,7 +40,7 @@ export function CountdownItem({
       <span
         className={`
           uppercase text-neutral-300
-          ${isSmall ? "mt-0.5 text-[10px]" : "mt-1 text-xs"}
+          ${isSmall ? "mt-0.5 text-[10px]" : "mt-1 text-[10px]"}
         `}
       >
         {label}

@@ -14,14 +14,16 @@ export default function EarlyAccessCountdown() {
     setMounted(true);
   }, []);
 
-  const { days, hours, minutes, seconds } = useCountdown(EARLY_ACCESS_TARGET_DATE);
+  const { days, hours, minutes, seconds } = useCountdown(
+    EARLY_ACCESS_TARGET_DATE,
+  );
 
   if (!mounted) {
     return null; // prevents SSR mismatch
   }
 
   return (
-    <section className="relative space-y-4 md:space-y-6 mx-auto flex max-w-3xl flex-col items-center justify-center px-6 text-center text-white">
+    <section className="relative space-y-4 md:space-y-6 mx-auto flex max-w-3xl flex-col items-center justify-center px-2 text-center text-white">
       <div className="space-y-2 max-sm:px-6">
         <h1
           className="text-4xl font-semibold md:text-5xl bg-linear-to-br
@@ -51,8 +53,8 @@ export default function EarlyAccessCountdown() {
         </button>
       </div> */}
 
-      <div className="space-y-6 mt-4">
-        <div className=" flex gap-4 md:gap-5 items-center">
+      <div className="relative w-full  space-y-6 mt-4 ">
+        <div className=" flex w-full items-center md:gap-5 justify-evenly">
           <CountdownItem value={days} label="Days" />
           <span className="text-2xl text-zinc-800 md:text-3xl">|</span>
           <CountdownItem value={hours} label="Hours" />

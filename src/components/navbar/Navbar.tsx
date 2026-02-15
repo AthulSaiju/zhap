@@ -70,13 +70,13 @@ export default function Navbar() {
   return (
     <div
       ref={containerRef}
-      className="w-full flex flex-col items-center justify-center pt-2 z-50 fixed top-0 left-0 "
+      className="w-full  md:flex flex-col items-center justify-center pt-2 z-50 absolute md:fixed top-0 left-0 "
     >
       {/* <div className="w-full h-px bg-white absolute left-0 z-10 top-10"></div> */}
       <nav
         ref={navRef}
         className="
-         w-[80%] md:w-[50%] mx-auto
+         w-[90%] md:w-[50%] mx-auto
            border border-white/10 rounded-sm
           
           overflow-hidden
@@ -88,7 +88,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between px-4 py-2 text-white relative z-20 bg-[#353030] backdrop-blur-lg">
           <button
             onClick={toggleMenu}
-            className="group flex items-center gap-2 px-4 py-2 cursor-pointer rounded-lg hover:bg-white/5 transition-colors"
+            className="group flex  items-center gap-2 px-4 py-2 cursor-pointer rounded-lg hover:bg-white/5 transition-colors"
           >
             <div className="relative w-6 h-6">
               {/* Top line */}
@@ -122,14 +122,14 @@ export default function Navbar() {
               />
             </div>
 
-            <span className="text-sm font-medium ml-1">Menu</span>
+            <span className="hidden md:block text-sm font-medium ml-1">Menu</span>
           </button>
 
-          <div className="absolute left-1/2  -translate-x-1/2 text-2xl font-bold tracking-widest uppercase">
-            Clipbase
+          <div className=" text-2xl font-bold tracking-widest uppercase">
+            zhap
           </div>
 
-          <button className="px-6 py-2.5 rounded-full bg-white text-black text-sm font-bold hover:scale-105 active:scale-95 transition-transform">
+          <button className="px-6 py-2 rounded-full bg-white text-black text-sm font-bold hover:scale-105 active:scale-95 transition-transform">
             Join
           </button>
         </div>
@@ -141,7 +141,7 @@ export default function Navbar() {
             className="p-4 grid grid-cols-1 lg:grid-cols-3 gap-4"
           >
             {/* ── COL 1: PRODUCTS CARD ── */}
-            <div className="bg-[#1c1c1c] rounded-3xl p-8 flex flex-col justify-between min-h-[400px] opacity-0 translate-y-4">
+            <div className="bg-[#1c1c1c] rounded-3xl p-8 hidden  md:flex flex-col justify-between min-h-[400px] opacity-0 translate-y-4">
               <div>
                 <h3 className="text-[#888] text-xs font-semibold tracking-wider mb-6">
                   OUR PRODUCTS

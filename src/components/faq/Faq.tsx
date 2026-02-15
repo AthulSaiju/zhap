@@ -7,25 +7,25 @@ import CTA from "../cta/Cta";
 
 const faqs = [
   {
-    q: "What is Clipbase and how does it work?",
-    a: "Clipbase is a platform where you create content for brands, startups, podcasts, streamers, and YouTubers—post organically, get paid for your creativity and views",
+    q: "What is Zhap and how does it work?",
+    a: "Zhap is a performance-based content distribution platform where Brands get organic reach at scale, creators get paid for the content they create—tracked transparently, paid fairly.",
   },
   {
     q: "How do creators make money on Clipbase?",
-    a: "You can build internal tools, AI workflows, automations, dashboards, and integrations without writing code.",
+    a: "Join campaigns, create or clip content, post to your accounts, and earn money for every verified view your content gets. Instant UPI payouts—simple & transparent.",
   },
   {
     q: "Who can join as a creator or clipper?",
-    a: "Anyone with a smartphone and an opinion. No editing skills, no follower count, no experience required.",
+    a: "Anyone! Video editors, content creators, clippers, side hustlers, beginners, or people thinking about getting started.",
   },
   {
     q: "Do I need a large following to join?",
-    a: "Nope. Clipbase pays per view, not follower count. Beginners can earn just as much as established creators.",
+    a: "Nope! Your follower count doesn't matter at all. We pay you based on views—so whether you've got 20 followers or 200K, you earn the same rates. Everyone starts equal.",
   },
 
   {
-    q: "Is Clipbase Free to Join?",
-    a: "Absolutely! Clipbase is free to join. No membership fees, no upfront costs. We only make money when you do.",
+    q: "Is Zhap Free to Join?",
+    a: "Absolutely! Zhap is free to join. No membership fees, no upfront costs. We only make money when you do.",
   },
   //   {
   //     q: "Can I do this part-time?",
@@ -45,8 +45,8 @@ const faqs = [
     a: "Unlimited! Join as many as you want simultaneously. Most active creators work on multiple campaigns at once to maximize earnings.",
   },
     {
-      q: "What type of campaigns are available on Clipbase?",
-      a: "Campaigns from D2C Brands, Startups, Podcasts, Streamers, YouTubers, Local Businesses and anyone needing authentic content and organic distribution at scale.",
+      q: "What type of campaigns are available on Zhap?",
+      a: "Campaigns from D2C Brands, Startups, Podcasts, Streamers, YouTubers, Local Businesses and many more.",
     },
   {
     q: "Why should I join the waitlist early?",
@@ -110,12 +110,12 @@ export default function Faq() {
         {/* FAQ List */}
         <div className="divide-y divide-white/10">
           {faqs.map((item, i) => (
-            <div key={i} className="py-8">
+            <div key={i} className="py-4 md:py-8">
               <button
                 onClick={() => toggle(i)}
                 className="flex w-full items-center cursor-pointer justify-between text-left"
               >
-                <span className="text-xl md:text-2xl font-medium text-white">
+                <span className="text-lg md:text-2xl font-medium text-white">
                   {item.q}
                 </span>
 
@@ -142,7 +142,7 @@ export default function Faq() {
                 }}
                 className="h-0 overflow-hidden opacity-0"
               >
-                <p className="mt-6 md:max-w-3xl text-lg md:text-xl leading-relaxed text-neutral-400">
+                <p className="mt-6 md:max-w-3xl text-sm md:text-xl leading-relaxed text-neutral-400">
                   {item.a}
                 </p>
               </div>
@@ -154,8 +154,8 @@ export default function Faq() {
       <section className=" w-full md:w-[70%] text-center py-16 md:p-16  flex flex-col items-center justify-center">
         <AnimatedText>
           <p className=" w-full text-xl leading-relaxed text-white/80 md:text-4xl">
-            Every clip you create, Every story you tell. Every audience you
-            reach—no matter how small—gets you paid.
+            Every clip you create, Every audience you
+            reach, no matter how small — gets you <span className="text-green-400">paid</span>.
           </p>
         </AnimatedText>
 
