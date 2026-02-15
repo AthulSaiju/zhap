@@ -2,8 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AnimatedText from "@/common/text/AnimatedText";
 import CTA from "../cta/Cta";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const faqs = [
   {
@@ -44,10 +47,10 @@ const faqs = [
     q: "How many campaigns can I join?",
     a: "Unlimited! Join as many as you want simultaneously. Most active creators work on multiple campaigns at once to maximize earnings.",
   },
-    {
-      q: "What type of campaigns are available on Zhap?",
-      a: "Campaigns from D2C Brands, Startups, Podcasts, Streamers, YouTubers, Local Businesses and many more.",
-    },
+  {
+    q: "What type of campaigns are available on Zhap?",
+    a: "Campaigns from D2C Brands, Startups, Podcasts, Streamers, YouTubers, Local Businesses and many more.",
+  },
   {
     q: "Why should I join the waitlist early?",
     a: "Early creators get priority access, higher CPM campaigns, and first access to top campaigns when we launch.",
@@ -57,6 +60,35 @@ const faqs = [
 export default function Faq() {
   const [open, setOpen] = useState<number | null>(null);
   const contentRefs = useRef<HTMLDivElement[]>([]);
+  const faqItemsRef = useRef<HTMLDivElement[]>([]);
+  const faqContainerRef = useRef<HTMLDivElement>(null);
+
+  // Reveal animation for FAQ items
+  useEffect(() => {
+    if (faqItemsRef.current.length > 0) {
+      gsap.fromTo(
+        faqItemsRef.current,
+        {
+          y: 60,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: faqContainerRef.current,
+            start: "top 50%",
+            end: "bottom 20%",
+            toggleActions: "play none play reverse",
+          },
+        },
+      );
+    }
+  }, []);
+
 
   const toggle = (i: number) => {
     if (open === i) {
@@ -108,9 +140,15 @@ export default function Faq() {
         </div>
 
         {/* FAQ List */}
-        <div className="divide-y divide-white/10">
+        <div ref={faqContainerRef} className="divide-y divide-white/10">
           {faqs.map((item, i) => (
-            <div key={i} className="py-4 md:py-8">
+            <div
+              key={i}
+              ref={(el) => {
+                if (el) faqItemsRef.current[i] = el;
+              }}
+              className="py-4 md:py-8"
+            >
               <button
                 onClick={() => toggle(i)}
                 className="flex w-full items-center cursor-pointer justify-between text-left"
@@ -151,11 +189,11 @@ export default function Faq() {
         </div>
       </section>
 
-      <section className=" w-full md:w-[70%] text-center py-16 max-sm:py-[55%] md:p-16  flex flex-col items-center justify-center">
+      <section className=" w-full md:w-[70%] text-center py-16 max-sm:py-[45%] md:p-16  flex flex-col items-center justify-center">
         <AnimatedText>
           <p className=" w-full text-xl leading-relaxed text-white/80 md:text-4xl">
-            Every clip you create, Every audience you
-            reach, no matter how small — gets you <span className="text-green-400">paid</span>.
+            Every clip you create, Every audience you reach, no matter how small
+            — gets you <span className="text-green-400">paid</span>.
           </p>
         </AnimatedText>
 

@@ -39,9 +39,9 @@ const Hero = () => {
 
     // -------------------------------------------------------------------------------------------------------
 
-    <section className="relative min-h-[94vh]  w-full flex items-center justify-center bg-black text-white overflow-hidden px-6 pb-[4%]">
+    <section className="relative min-h-[110vh]  w-full flex items-center justify-center bg-black text-white overflow-hidden px-6 ">
       {/* Subtle grid background */}
-      <div className="absolute inset-0 opacity-[0.7] bg-grid" />
+      <div className="absolute inset-0 opacity-[0.6] bg-grid" />
 
       {/* Soft top spotlight */}
       <div
@@ -54,7 +54,7 @@ const Hero = () => {
       "
       />
 
-      <div className="relative z-10 max-w-3xl w-full text-center  mt-[8%]">
+      <div className="relative z-10 max-w-3xl w-full text-center ">
         {/* Logo */}
         {/* <div className="flex justify-center">
           <div className="w-14 h-14 rounded-xl bg-lime-400 flex items-center justify-center text-black font-bold">
@@ -65,7 +65,7 @@ const Hero = () => {
         {/* Badge */}
         <div className=" flex justify-center">
           <div className="flex items-center gap-2 px-4 py-1 rounded-full bg-white/5 border border-white/10 text-xs tracking-wide text-white/80 backdrop-blur-sm">
-            <span className="w-2 h-2 rounded-full bg-lime-400" />
+            <span className="w-2 h-2 rounded-full  bg-green-400" />
             EARLY ACCESS{" "}
           </div>
         </div>
@@ -109,27 +109,7 @@ const Hero = () => {
         )}
 
         {/* Email + CTA */}
-        <div className="mt-10 md:mt-6 flex items-center justify-center  p-2">
-          {/* <input
-            type="email"
-            placeholder="Email"
-            className="flex-1 bg-transparent px-4 py-2 text-sm text-white placeholder-white/40 focus:outline-none"
-          />
-
-          <button
-            className="
-            px-8 py-3
-            rounded-full
-            bg-green-300
-            text-black
-            text-sm
-            transition
-            hover:bg-lime-300
-            font-semibold
-          "
-          >
-            Join Early Access
-          </button> */}
+        <div className="mt-6 md:mt-6 flex items-center justify-center  p-2">
           <CTA />
         </div>
 
@@ -143,7 +123,7 @@ const Hero = () => {
           </div>
 
           <p className="text-sm text-white/50">
-            Join 300+ creators on the waitlist
+            Join 300+ creators
           </p>
         </div>
       </div>
