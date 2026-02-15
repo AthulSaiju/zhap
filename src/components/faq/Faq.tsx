@@ -151,7 +151,7 @@ export default function Faq() {
         </div>
       </section>
 
-      <section className=" w-full md:w-[70%] text-center py-16 md:p-16  flex flex-col items-center justify-center">
+      <section className=" w-full md:w-[70%] text-center py-16 max-sm:py-[55%] md:p-16  flex flex-col items-center justify-center">
         <AnimatedText>
           <p className=" w-full text-xl leading-relaxed text-white/80 md:text-4xl">
             Every clip you create, Every audience you

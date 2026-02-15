@@ -6,24 +6,15 @@ import WaitlistForm from "./WaitlistForm";
 export default function CTA() {
   const dialogRef = useRef<HTMLDialogElement>(null);
 
-  const lockScroll = () => {
-    document.documentElement.style.overflow = "hidden";
-    document.body.style.overflow = "hidden";
-  };
 
-  const unlockScroll = () => {
-    document.documentElement.style.overflow = "";
-    document.body.style.overflow = "";
-  };
 
   const openDialog = () => {
-    lockScroll();
+   
     dialogRef.current?.showModal();
   };
 
   const closeDialog = () => {
-    unlockScroll();
-    dialogRef.current?.close();
+      dialogRef.current?.close();
   };
 
   return (
@@ -67,7 +58,6 @@ hover:before:opacity-100
       {/* Dialog */}
       <dialog
         ref={dialogRef}
-        onClose={unlockScroll}
         onClick={(e) => {
           // Close when clicking backdrop
           if (e.target === e.currentTarget) closeDialog();
@@ -79,16 +69,16 @@ hover:before:opacity-100
           rounded-2xl
           bg-black
           text-white
-          w-[30vw] h-[80vh]
-          px-4
+          w-[90%] md:w-[30vw] h-[70vh] md:h-[75vh]
+          px-1 md:px-8
         "
       >
-        <div className="p-8">
+        <div className="p-4 py-8 md:px-4 ">
           {/* Header */}
           <div className="mb-6">
-            <h3 className="text-xl font-semibold">Join Early Access</h3>
-            <p className="mt-2 text-sm text-neutral-400">
-              Earn from day one. No sponsors. No gatekeeping.
+            <h3 className="text-2xl font-semibold">Get Early Access</h3>
+            <p className="mt-2 text-lg text-neutral-400">
+              Join, Clip, <span className="text-green-400">Earn</span> - It's that simple
             </p>
           </div>
 

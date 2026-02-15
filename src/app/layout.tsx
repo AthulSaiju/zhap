@@ -11,23 +11,23 @@ import Navbar from "@/components/navbar/Navbar";
 // Global metadata for SEO and sharing
 export const metadata: Metadata = {
   title: {
-    default: "Clipbase",
-    template: "%s | Clipbase",
+    default: "Zhap",
+    template: "%s | Zhap",
   },
-  description: "Turn clips into income with Clipbase — earn from your edits.",
-  applicationName: "Clipbase",
-  metadataBase: new URL("https://clipbase.in"),
+  description: "Turn clips into income with Zhap — earn from your clips.",
+  applicationName: "Zhap",
+  metadataBase: new URL("https://zhap.in"),
   openGraph: {
-    title: "Clipbase",
-    description: "Turn clips into income with Clipbase — earn from your edits.",
-    url: "https://clipbase.in",
-    siteName: "Clipbase",
+    title: "Zhap",
+    description: "Turn clips into income with Zhap — earn from your clips.",
+    url: "https://zhap.in",
+    siteName: "Zhap",
     images: [
       {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Clipbase Social Preview",
+        alt: "Zhap Social Preview",
       },
     ],
     locale: "en_IN",
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Clipbase",
-    description: "Turn clips into income with Clipbase — earn from your edits.",
+    title: "Zhap",
+    description: "Turn clips into income with Zhap — earn from your clips.",
     images: ["/og.png"],
   },
 };
@@ -57,7 +57,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className={myFont.className}>
-        <div className="fixed inset-0 z-100 pointer-events-none">
+        <div className="hidden md:block fixed inset-0 z-100 pointer-events-none">
           <Spotlight
             className="-top-40 z-100 left-0 md:-top-60 md:-left-60"
             fill="white"
