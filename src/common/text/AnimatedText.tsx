@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
-
+import React, { useRef, ReactNode, ReactElement } from "react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -9,28 +8,41 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-export default function AnimatedText({ children, animateOnScroll = true, delay = 0 }) {
-  const containerRef = useRef(null);
-  const elementRef = useRef([]);
-  const splitRef = useRef([]);
-  const lines = useRef([]);
+type AnimatedTextProps = {
+  children: ReactNode;
+  animateOnScroll?: boolean;
+  delay?: number;
+};
 
-  useGSAP(() => {
-    if (!containerRef.current) return;
+export default function AnimatedText({
+  children,
+  animateOnScroll = true,
+  delay = 0,
+}: AnimatedTextProps) {
+  const containerRef = useRef<HTMLElement | null>(null);
+  const elementRef = useRef<HTMLElement[]>([]);
+  const splitRef = useRef<SplitText[]>([]);
+  const lines = useRef<HTMLElement[]>([]);
 
-    splitRef.current = [];
-    elementRef.current = [];
-    lines.current = [];
+  useGSAP(
+    () => {
+      if (!containerRef.current) return;
 
-    let elements = [];
-    if (containerRef.current.hasAttribute("data-copy-wrapper")) {
-      elements = Array.from(containerRef.current.children);
-    } else {
-      elements = [containerRef.current];
-    }
+      splitRef.current = [];
+      elementRef.current = [];
+      lines.current = [];
 
-    elements.forEach((element) =>{
+      let elements: HTMLElement[] = [];
+
+      if (containerRef.current.hasAttribute("data-copy-wrapper")) {
+        elements = Array.from(containerRef.current.children) as HTMLElement[];
+      } else {
+        elements = [containerRef.current];
+      }
+
+      elements.forEach((element) => {
         elementRef.current.push(element);
+
         const split = SplitText.create(element, {
           type: "lines",
           mask: "lines",
@@ -43,28 +55,26 @@ export default function AnimatedText({ children, animateOnScroll = true, delay =
         const textIndent = computedStyle.textIndent;
 
         if (textIndent && textIndent !== "0px") {
-          if(split.lines.length > 0) {
-            split.lines[0].style.paddingLeft = textIndent;
+          if (split.lines.length > 0) {
+            (split.lines[0] as HTMLElement).style.paddingLeft = textIndent;
           }
-          element.style.textIndent = "0px"; 
+          element.style.textIndent = "0px";
         }
 
+        lines.current.push(...(split.lines as HTMLElement[]));
+      });
 
-        lines.current.push(...split.lines);
-    });
+      gsap.set(lines.current, { y: "100%" });
 
-    gsap.set(lines.current, { y: "100%",});
-
-    const animationProps = {
+      const animationProps = {
         y: "0%",
         duration: 1,
         stagger: 0.1,
         ease: "power4.out",
-        delay: delay,
+        delay,
+      };
 
-    };
-
-    if(animateOnScroll){
+      if (animateOnScroll) {
         gsap.to(lines.current, {
           ...animationProps,
           scrollTrigger: {
@@ -74,34 +84,35 @@ export default function AnimatedText({ children, animateOnScroll = true, delay =
             once: false,
           },
         });
-    } else {
+      } else {
         gsap.to(lines.current, animationProps);
-    }
+      }
 
-    return() => {
+      return () => {
         splitRef.current.forEach((split) => {
-          if(split) {
-            split.revert();
-          }
+          split?.revert();
         });
-    };
+      };
+    },
+    {
+      scope: containerRef,
+      dependencies: [animateOnScroll, delay],
+    }
+  );
 
-
-  }, {
-    scope: containerRef,
-    dependencies: [animateOnScroll, delay],
-  });
-
-  if(React.Children.count(children) === 1) {
-    return React.cloneElement(children, { ref: containerRef });
-  }
-
-  return (
-    <div ref={containerRef} data-copy-wrapper="true">
-        {children}
-
-    </div>
-  )
-
+  if (
+  React.Children.count(children) === 1 &&
+  React.isValidElement(children)
+) {
+  return React.cloneElement(children, {
+    ref: containerRef,
+  } as any);
 }
 
+
+  return (
+    <div ref={containerRef as React.RefObject<HTMLDivElement>} data-copy-wrapper="true">
+      {children}
+    </div>
+  );
+}
