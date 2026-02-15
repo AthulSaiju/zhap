@@ -6,15 +6,12 @@ import WaitlistForm from "./WaitlistForm";
 export default function CTA() {
   const dialogRef = useRef<HTMLDialogElement>(null);
 
-
-
   const openDialog = () => {
-   
     dialogRef.current?.showModal();
   };
 
   const closeDialog = () => {
-      dialogRef.current?.close();
+    dialogRef.current?.close();
   };
 
   return (
@@ -69,7 +66,7 @@ hover:before:opacity-100
           rounded-2xl
           bg-black
           text-white
-          w-[90%] md:w-[30vw] h-[70vh] md:h-[75vh]
+          w-[90%] md:w-[30vw] h-[73vh] md:h-[75vh]
           px-1 md:px-8
         "
       >
@@ -78,7 +75,8 @@ hover:before:opacity-100
           <div className="mb-6">
             <h3 className="text-2xl font-semibold">Get Early Access</h3>
             <p className="mt-2 text-lg text-neutral-400">
-              Join, Clip, <span className="text-green-400">Earn</span> - It's that simple
+              Join, Clip, <span className="text-green-400">Earn</span> - It's
+              that simple
             </p>
           </div>
 

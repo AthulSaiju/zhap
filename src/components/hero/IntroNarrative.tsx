@@ -4,7 +4,7 @@ import AnimatedText from "@/common/text/AnimatedText";
 
 export default function IntroNarrative() {
   return (
-    <section className="relative w-full flex items-center justify-center overflow-hidden px-3 md:px-6 py-[50%] md:py-[15%]">
+    <section className="relative w-full flex items-center justify-center overflow-hidden px-3 md:px-6 py-[45%] md:py-[15%]">
       {/* Background vignette */}
       {/* <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.08),transparent_70%)]" /> */}
 
