@@ -39,7 +39,7 @@ const Hero = () => {
 
     // -------------------------------------------------------------------------------------------------------
 
-    <section className="relative min-h-[95vh] md:min-h-[110vh]  w-full flex items-center justify-center bg-black text-white overflow-hidden px-6 ">
+    <section className="relative min-h-screen md:min-h-[110vh]  w-full flex items-center justify-center bg-black text-white overflow-hidden px-6 ">
       {/* Subtle grid background */}
       <div className="absolute inset-0 opacity-[0.6] bg-grid" />
 

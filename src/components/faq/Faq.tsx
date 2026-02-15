@@ -14,12 +14,12 @@ const faqs = [
     a: "Zhap is a performance-based content distribution platform where Brands get organic reach at scale, creators get paid for the content they create—tracked transparently, paid fairly.",
   },
   {
-    q: "How do creators make money on Clipbase?",
+    q: "How do creators make money on Zhap?",
     a: "Join campaigns, create or clip content, post to your accounts, and earn money for every verified view your content gets. Instant UPI payouts—simple & transparent.",
   },
   {
     q: "Who can join as a creator or clipper?",
-    a: "Anyone! Video editors, content creators, clippers, side hustlers, beginners, or people thinking about getting started.",
+    a: "Anyone! Video editors, content creators, clippers, side hustlers, beginners, or people like you!",
   },
   {
     q: "Do I need a large following to join?",
@@ -80,7 +80,7 @@ export default function Faq() {
           ease: "power3.out",
           scrollTrigger: {
             trigger: faqContainerRef.current,
-            start: "top 50%",
+            start: "top 60%",
             end: "bottom 20%",
             toggleActions: "play none play reverse",
           },
