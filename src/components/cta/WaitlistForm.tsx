@@ -117,6 +117,7 @@ export default function WaitlistForm() {
         required
         placeholder="Name"
         value={form.name}
+        autoFocus={false}
         onChange={handleChange}
         className="w-full rounded-3xl bg-neutral-900 px-4 py-3 text-sm
         text-white placeholder-neutral-500
@@ -130,6 +131,7 @@ export default function WaitlistForm() {
         required
         placeholder="Email"
         value={form.email}
+        autoFocus={false}
         onChange={handleChange}
         className="w-full rounded-3xl bg-neutral-900 px-4 py-3 text-sm
         text-white placeholder-neutral-500
@@ -142,6 +144,7 @@ export default function WaitlistForm() {
           name="state"
           required
           value={form.state}
+          autoFocus={false}
           onChange={handleChange}
           className="w-full appearance-none rounded-3xl bg-neutral-900 px-4 pr-10 py-3 text-sm
     text-white focus:outline-none focus:ring-1 focus:ring-white/20"
@@ -180,6 +183,7 @@ export default function WaitlistForm() {
           name="language"
           required
           value={form.language}
+          autoFocus={false}
           onChange={handleChange}
           className="w-full appearance-none rounded-3xl bg-neutral-900  px-4 py-3 text-sm 
   text-white focus:outline-none focus:ring-1 focus:ring-white/20"
@@ -216,6 +220,7 @@ export default function WaitlistForm() {
         type="tel"
         placeholder="Phone (optional)"
         value={form.phone}
+        autoFocus={false}
         onChange={handleChange}
         className="w-full rounded-3xl bg-neutral-900 px-4 py-3 text-sm
         text-white placeholder-neutral-500

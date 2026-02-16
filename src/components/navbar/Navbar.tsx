@@ -26,7 +26,7 @@ export default function Navbar() {
       const tl = gsap.timeline({ paused: true });
 
       tl.to(nav, {
-        width: "80%",
+        width: "90%",
         duration: 0.6,
         ease: "power4.inOut",
       })
@@ -76,7 +76,7 @@ export default function Navbar() {
       <nav
         ref={navRef}
         className="
-         w-[90%] md:w-[50%] mx-auto
+         w-[85%] md:w-[50%] mx-auto
            border border-white/10 rounded-sm
           
           overflow-hidden
@@ -85,7 +85,7 @@ export default function Navbar() {
         "
       >
         {/* ───── TOP BAR ───── */}
-        <div className="flex items-center justify-between px-4 py-2 text-white relative z-20 bg-[#353030] backdrop-blur-lg">
+        <div className="flex items-center justify-between px-4 py-2 text-white relative z-20 bg-[#1c1a1a] backdrop-blur-lg">
           <button
             onClick={toggleMenu}
             className="group flex  items-center gap-2 px-4 py-2 cursor-pointer rounded-lg hover:bg-white/5 transition-colors"
@@ -138,36 +138,36 @@ export default function Navbar() {
         <div ref={dropdownRef} className="h-0 overflow-hidden bg-[#0a0a0a]">
           <div
             ref={dropdownInnerRef}
-            className="p-4 grid grid-cols-1 lg:grid-cols-3 gap-4"
+            className="md:p-4 p-2 grid grid-cols-1 lg:grid-cols-3 gap-4"
           >
             {/* ── COL 1: PRODUCTS CARD ── */}
             <div className="bg-[#1c1c1c] rounded-3xl p-8 hidden  md:flex flex-col justify-between min-h-[400px] opacity-0 translate-y-4">
               <div>
                 <h3 className="text-[#888] text-xs font-semibold tracking-wider mb-6">
-                  OUR PRODUCTS
+                  PLATFORM
                 </h3>
                 <ul className="space-y-6">
-                  <li className="text-xl text-white font-medium hover:text-gray-300 cursor-pointer transition-colors">
-                    The Vault
+                  <li className="text-xl text-white/70 font-medium  cursor-default transition-colors">
+                    Dashboard
                   </li>
-                  <li className="flex items-center gap-3 text-xl text-white font-medium hover:text-gray-300 cursor-pointer transition-colors">
-                    Page Transition Course
-                    <span className="bg-[#5b21b6] text-[#d8b4fe] text-[10px] font-bold px-1.5 py-0.5 rounded">
-                      WIP
+                  <li className="flex items-center gap-3 text-xl text-white/70 font-medium  cursor-default transition-colors">
+                    Explore
+                    <span className="bg-green-400 text-black text-[10px] font-bold px-1.5 py-0.5 rounded">
+                      NEW
                     </span>
                   </li>
-                  <li className="text-xl text-white font-medium hover:text-gray-300 cursor-pointer transition-colors">
-                    Icon Library
+                  <li className="text-xl text-white/70 font-medium  cursor-default transition-colors">
+                    Profile
                   </li>
-                  <li className="text-xl text-white font-medium hover:text-gray-300 cursor-pointer transition-colors">
-                    Community
+                  <li className="text-xl text-white/70 font-medium  cursor-default transition-colors">
+                    Wallet
                   </li>
                 </ul>
               </div>
               <div className="mt-8 flex items-center gap-3 text-xl text-white font-medium">
-                Easings
-                <span className="bg-[#333] text-[#888] text-[10px] font-bold px-1.5 py-0.5 rounded">
-                  SOON
+                
+                <span className="bg-[#333] text-[#d9d7d7] text-[10px] font-bold px-3 py-2 rounded">
+                 COMING SOON
                 </span>
               </div>
             </div>
@@ -176,17 +176,17 @@ export default function Navbar() {
             <div className="flex flex-col justify-between p-6 opacity-0 translate-y-4">
               <div>
                 <h3 className="text-[#888] text-xs font-semibold tracking-wider mb-6">
-                  EXPLORE
+                  COMMUNITY
                 </h3>
                 <ul className="space-y-6">
                   <li className="text-xl text-white font-medium hover:text-gray-300 cursor-pointer transition-colors">
-                    Osmo Showcase
+                    Instagram
                   </li>
                   <li className="text-xl text-white font-medium hover:text-gray-300 cursor-pointer transition-colors">
-                    Updates
+                    Youtube
                   </li>
                   <li className="text-xl text-white font-medium hover:text-gray-300 cursor-pointer transition-colors">
-                    Pricing
+                    Reddit
                   </li>
                 </ul>
               </div>
@@ -201,18 +201,18 @@ export default function Navbar() {
             </div>
 
             {/* ── COL 3: MILESTONE CARD ── */}
-            <div className="bg-[#1c1c1c] rounded-3xl pt-8 flex flex-col items-center text-center relative overflow-hidden min-h-[400px] opacity-0 translate-y-4">
+            <div className="bg-[#1c1c1c] rounded-3xl pt-8 flex flex-col items-center text-center relative overflow-hidden md:min-h-[400px] min-h-[350px] opacity-0 translate-y-4">
               <div className="relative z-10 w-full flex flex-col items-center h-full">
-                <div className="flex items-center gap-2 mb-12">
+                <div className="flex items-center gap-2 md:mb-12 mb-6">
                   <span className="text-[#888] text-xs font-bold uppercase">
                     Featured
                   </span>
-                  <span className="bg-[#00f510] text-[#000000] text-[10px] font-bold px-2 py-0.5 rounded-full">
+                  <span className="bg-green-400 text-[#000000] text-[10px] font-bold px-2 py-1 rounded-full">
                     MILESTONE
                   </span>
                 </div>
 
-                <h2 className="text-3xl text-white font-medium leading-tight mb-8">
+                <h2 className=" text-2xl md:text-3xl text-white font-medium leading-tight md:mb-8 mb-6">
                   We hit 300+
                   <br />
                   Creators!
@@ -220,9 +220,9 @@ export default function Navbar() {
 
                 {/* <button className="bg-white text-black font-bold px-6 py-3 rounded-xl hover:scale-105 transition-transform mb-auto">
                   Join them
-                </button>
+                </button> */}
 
-                <div className="mt-12 flex -space-x-4 bg-red-500">
+                {/* <div className="mt-12 flex -space-x-4 bg-red-500">
                   {[1, 2, 3, 4].map((i) => (
                     <div
                       key={i}
@@ -237,7 +237,7 @@ export default function Navbar() {
                   ))}
                 </div> */}
 
-                <div className=" relative h-[100%]  w-full">
+                <div className=" relative h-full  w-full">
                   <div className="w-full flex items-center justify-center">
                     <Image
                       src="/clippers-blue.jpeg"
