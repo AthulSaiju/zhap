@@ -60,7 +60,7 @@ const Hero = () => {
         />
       </div>
       {/* Subtle grid background */}
-      <div className="absolute inset-0 opacity-[0.6] bg-grid" />
+      {/* <div className="absolute inset-0 opacity-[0.6] bg-grid" /> */}
 
       {/* Soft top spotlight */}
       <div
