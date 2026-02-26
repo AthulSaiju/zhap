@@ -18,9 +18,9 @@ export function CountdownItem({
       className={`
         flex flex-col items-center justify-center
         rounded-xl bg-background
-        shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]
+        shadow-[inset_0_1px_0_rgba(255,255,255,0.15)]
         ${isSmall 
-          ? "w-[60px] md:w-[70px] p-3" 
+          ? "w-[57px] md:w-[70px] p-3" 
           : "w-[70px] md:w-[120px] p-4"}
       `}
     >
@@ -30,7 +30,7 @@ export function CountdownItem({
           bg-[linear-gradient(24deg,rgb(109,255,194)_0%,rgba(255,255,247,0.34)_100%)]
           bg-clip-text text-transparent
           ${isSmall 
-            ? "text-2xl md:text-2xl" 
+            ? "text-xl md:text-2xl" 
             : "text-3xl md:text-6xl"}
         `}
       >
@@ -40,7 +40,7 @@ export function CountdownItem({
       <span
         className={`
           uppercase text-neutral-300
-          ${isSmall ? "mt-0.5 text-[10px]" : "mt-1 text-[10px]"}
+          ${isSmall ? "mt-0.5 text-[8px] md:text-[10px]" : "mt-1 text-[10px]"}
         `}
       >
         {label}

@@ -80,8 +80,8 @@ export default function AnimatedText({
           scrollTrigger: {
             trigger: containerRef.current,
             start: "top 75%",
-            toggleActions: "play none none reverse",
-            once: false,
+            // toggleActions: "play none none reverse",
+            once: true,
           },
         });
       } else {

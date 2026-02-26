@@ -8,7 +8,7 @@ export default function Footer() {
       className="relative w-full h-[60vh] md:h-[75vh] bg-black "
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
-      <div className="fixed bottom-0 h-[60vh] md:h-[75vh] w-full flex items-center justify-center bg-grid">
+      <div className="fixed bottom-0 h-[60vh] md:h-[75vh] w-full flex items-center justify-center bg-grid2">
         <EarlyAccessCountdown />
       </div>
 

@@ -6,6 +6,7 @@ import { CountdownItem } from "../footer/CountdownItem";
 import { useCountdown } from "@/hooks/useCountdown";
 import { EARLY_ACCESS_TARGET_DATE } from "@/lib/utils";
 import CTA from "../cta/Cta";
+import DarkVeil from "@/common/darkVeil";
 
 const Hero = () => {
   const [mounted, setMounted] = useState(false);
@@ -40,6 +41,24 @@ const Hero = () => {
     // -------------------------------------------------------------------------------------------------------
 
     <section className="relative min-h-screen md:min-h-[110vh]  w-full flex items-center justify-center bg-black text-white overflow-hidden px-6 ">
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          position: "absolute",
+          top: "0",
+          left: "0",
+        }}
+      >
+        <DarkVeil
+          hueShift={0}
+          noiseIntensity={0.06}
+          scanlineIntensity={1}
+          speed={0.5}
+          scanlineFrequency={5}
+          warpAmount={5}
+        />
+      </div>
       {/* Subtle grid background */}
       <div className="absolute inset-0 opacity-[0.6] bg-grid" />
 
@@ -66,7 +85,7 @@ const Hero = () => {
         <div className=" flex justify-center">
           <div className="flex items-center gap-2 px-4 py-1 rounded-full bg-white/5 border border-white/10 text-xs tracking-wide text-white/80 backdrop-blur-sm">
             <span className="w-2 h-2 rounded-full  bg-green-400" />
-            EARLY ACCESS{" "}
+            LAUNCHING EARLY 2026{" "}
           </div>
         </div>
 
@@ -77,6 +96,7 @@ const Hero = () => {
   via-white/80
   to-white/20
   bg-clip-text
+  font-semibold
   text-transparent"
         >
           A New Era of Content Monetization
@@ -92,7 +112,7 @@ const Hero = () => {
         {/* Countdown */}
         {mounted && (
           <div className="space-y-4 mt-6 flex py-4 flex-col items-center justify-center">
-            <div className=" flex gap-4 md:gap-4 items-center">
+            <div className=" flex gap-3 md:gap-4 items-center">
               <CountdownItem value={days} label="Days" variant="sm" />
               <span className="text-2xl text-zinc-800 md:text-2xl">|</span>
               <CountdownItem value={hours} label="Hours" variant="sm" />
@@ -122,9 +142,7 @@ const Hero = () => {
             <div className="w-8 h-8 rounded-full bg-neutral-400 border border-black" />
           </div>
 
-          <p className="text-sm text-white/50">
-            Join 300+ creators
-          </p>
+          <p className="text-sm text-white/50">Join 300+ creators</p>
         </div>
       </div>
     </section>

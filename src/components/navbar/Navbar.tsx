@@ -76,8 +76,8 @@ export default function Navbar() {
       <nav
         ref={navRef}
         className="
-         w-[85%] md:w-[50%] mx-auto
-           border border-white/10 rounded-sm
+         w-[95%] md:w-[70%] mx-auto
+            rounded-xl border border-white/10
           
           overflow-hidden
           
@@ -85,7 +85,7 @@ export default function Navbar() {
         "
       >
         {/* ───── TOP BAR ───── */}
-        <div className="flex items-center justify-between px-4 py-2 text-white relative z-20 bg-[#1c1a1a] backdrop-blur-lg">
+        <div className="flex items-center justify-between px-4 py-2 text-white relative z-20 bg-[#181616] backdrop-blur-lg">
           <button
             onClick={toggleMenu}
             className="group flex  items-center gap-2 px-4 py-2 cursor-pointer rounded-lg hover:bg-white/5 transition-colors"

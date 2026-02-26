@@ -9,17 +9,17 @@ import CTA from "../cta/Cta";
 gsap.registerPlugin(ScrollTrigger);
 
 const faqs = [
-  {
-    q: "What is Zhap and how does it work?",
-    a: "Zhap is a performance-based content distribution platform where Brands get organic reach at scale, creators get paid for the content they create—tracked transparently, paid fairly.",
-  },
+  // {
+  //   q: "What is Zhap and how does it work?",
+  //   a: "Zhap is a performance-based content distribution platform where Brands get organic reach at scale, creators get paid for the content they create—tracked transparently, paid fairly.",
+  // },
   {
     q: "How do creators make money on Zhap?",
     a: "Join campaigns, create or clip content, post to your accounts, and earn money for every verified view your content gets. Instant UPI payouts—simple & transparent.",
   },
   {
-    q: "Who can join as a creator or clipper?",
-    a: "Anyone! Video editors, content creators, clippers, side hustlers, beginners, or people like you!",
+    q: "Who can join as a creator?",
+    a: "Anyone! Video editors, content creators, clippers, side hustlers, students, beginners, or people like you! Basically anyone with an internet connection and a smartphone.",
   },
   {
     q: "Do I need a large following to join?",
@@ -82,7 +82,8 @@ export default function Faq() {
             trigger: faqContainerRef.current,
             start: "top 60%",
             end: "bottom 20%",
-            toggleActions: "play none play reverse",
+            // toggleActions: "play none play reverse",
+            once: true,
           },
         },
       );
