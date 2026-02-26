@@ -40,7 +40,7 @@ const Hero = () => {
 
     // -------------------------------------------------------------------------------------------------------
 
-    <section className="relative min-h-screen md:min-h-[110vh]  w-full flex items-center justify-center bg-black text-white overflow-hidden px-6 ">
+    <section className="relative min-h-screen md:min-h-[110vh]  w-full flex items-center justify-center bg-black text-white overflow-hidden px-4 md:px-6 ">
       <div
         style={{
           width: "100%",
@@ -73,7 +73,7 @@ const Hero = () => {
       "
       />
 
-      <div className="relative z-10 max-w-3xl w-full text-center ">
+      <div className="relative z-10 md:max-w-3xl w-full text-center ">
         {/* Logo */}
         {/* <div className="flex justify-center">
           <div className="w-14 h-14 rounded-xl bg-lime-400 flex items-center justify-center text-black font-bold">
@@ -82,16 +82,16 @@ const Hero = () => {
         </div> */}
 
         {/* Badge */}
-        <div className=" flex justify-center">
+        <div className=" flex justify-center ">
           <div className="flex items-center gap-2 px-4 py-1 rounded-full bg-white/5 border border-white/10 text-xs tracking-wide text-white/80 backdrop-blur-sm">
             <span className="w-2 h-2 rounded-full  bg-green-400" />
-            LAUNCHING EARLY 2026{" "}
+           <p className="  md:text-xs">LAUNCHING EARLY 2026</p>
           </div>
         </div>
 
         {/* Title */}
         <h1
-          className="mt-8 text-4xl md:text-7xl bg-linear-to-br
+          className="mt-8 text-4xl md:text-7xl  leading-[1.2] bg-linear-to-br
   from-white
   via-white/80
   to-white/20
@@ -99,14 +99,13 @@ const Hero = () => {
   font-semibold
   text-transparent"
         >
-          A New Era of Content Monetization
+          A New Layer for the <br /> Creator Economy
         </h1>
 
         {/* Subtitle */}
         <p className="mt-6 md:mt-4 text-white/60 text-sm md:text-lg leading-relaxed">
-          Join campaigns that match your style. Create original content or clip
-          viral moments. Get paid for performance—every view counts, every skill
-          pays.
+          Where you earn based on views, not follower count. Where every post 
+          pays, not just viral ones. Making money from content just got easier.
         </p>
 
         {/* Countdown */}

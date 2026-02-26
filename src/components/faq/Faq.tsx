@@ -15,7 +15,7 @@ const faqs = [
   // },
   {
     q: "How do creators make money on Zhap?",
-    a: "Join campaigns, create or clip content, post to your accounts, and earn money for every verified view your content gets. Instant UPI payouts—simple & transparent.",
+    a: "You get paid per view. Join campaigns, create content, post to social media, and earn for every verified view. Tracked automatically, paid weekly via UPI.",
   },
   {
     q: "Who can join as a creator?",
