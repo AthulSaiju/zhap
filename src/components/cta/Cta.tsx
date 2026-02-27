@@ -3,7 +3,11 @@
 import { useRef } from "react";
 import WaitlistForm from "./WaitlistForm";
 
-export default function CTA() {
+interface CTAProps {
+  variant?: "nav";
+}
+
+export default function CTA({ variant }: CTAProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
 
   const openDialog = () => {
@@ -14,49 +18,62 @@ export default function CTA() {
     dialogRef.current?.close();
   };
 
+  const isNav = variant === "nav";
+
   return (
     <>
       {/* CTA Button */}
       <button
         onClick={openDialog}
-        className="
-relative
-px-8 py-3
-rounded-full
-text-black
-text-sm font-semibold
-tracking-[0.02em]
-cursor-pointer
+        className={
+          isNav
+            ? `
+              px-6 py-2
+              rounded-full
+              bg-white text-black
+              text-sm font-bold
+              transition-transform
+              hover:scale-105
+              active:scale-95
+              cursor-pointer
+            `
+            : `
+              relative
+              px-8 py-3
+              rounded-full
+              text-black
+              text-sm font-semibold
+              tracking-[0.02em]
+              cursor-pointer
 
-bg-gradient-to-b
-from-[#9bf7c2]
-to-[#6ee7b7]
+              bg-gradient-to-b
+              from-[#9bf7c2]
+              to-[#6ee7b7]
 
-border border-white/10
+              border border-white/10
+              shadow-[0_20px_60px_rgba(110,231,183,0.35)]
 
-shadow-[0_20px_60px_rgba(110,231,183,0.35)]
+              transition-all duration-300 ease-out
+              hover:-translate-y-1
+              active:scale-[0.98]
 
-transition-all duration-300 ease-out
-hover:-translate-y-1
-active:scale-[0.98]
-
-before:absolute
-before:inset-0
-before:rounded-full
-before:bg-white/10
-before:opacity-0
-before:transition-opacity
-hover:before:opacity-100
-"
+              before:absolute
+              before:inset-0
+              before:rounded-full
+              before:bg-white/10
+              before:opacity-0
+              before:transition-opacity
+              hover:before:opacity-100
+            `
+        }
       >
-        Join Early Access
+        {isNav ? "Join" : "Join Early Access"}
       </button>
 
       {/* Dialog */}
       <dialog
         ref={dialogRef}
         onClick={(e) => {
-          // Close when clicking backdrop
           if (e.target === e.currentTarget) closeDialog();
         }}
         className="
@@ -70,22 +87,22 @@ hover:before:opacity-100
           px-1 md:px-8
         "
       >
-        <div className="p-4 py-8 md:px-4 ">
-          {/* Header */}
+        <div className="p-4 py-8 md:px-4">
           <div className="mb-6">
-            <h3 className="text-2xl font-semibold">Get Early Access</h3>
+            <h3 className="text-2xl font-semibold">
+              Get Early Access
+            </h3>
             <p className="mt-2 text-lg text-neutral-400">
-              Join, Clip, <span className="text-green-400">Earn</span> - It's
-              that simple
+              Join, Create,{" "}
+              <span className="text-green-400">Earn</span> - It's that simple
             </p>
           </div>
 
           <WaitlistForm />
 
-          {/* Close */}
           <button
             onClick={closeDialog}
-            className="mt-4 w-full text-xs cursor-pointer text-neutral-500 hover:text-neutral-300"
+            className="mt-4 w-full text-xs text-neutral-500 hover:text-neutral-300"
           >
             Close
           </button>

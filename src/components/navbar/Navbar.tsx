@@ -4,6 +4,8 @@ import React, { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
+import Link from "next/link";
+import CTA from "../cta/Cta";
 
 export default function Navbar() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -129,9 +131,7 @@ export default function Navbar() {
             zhap
           </div>
 
-          <button className="px-6 py-2 rounded-full bg-white text-black text-sm font-bold hover:scale-105 active:scale-95 transition-transform">
-            Join
-          </button>
+          <CTA variant="nav"/>
         </div>
 
         {/* ───── DROPDOWN CONTENT ───── */}
@@ -179,16 +179,39 @@ export default function Navbar() {
                   COMMUNITY
                 </h3>
                 <ul className="space-y-6">
-                  <li className="text-xl text-white font-medium hover:text-gray-300 cursor-pointer transition-colors">
-                    Instagram
-                  </li>
-                  <li className="text-xl text-white font-medium hover:text-gray-300 cursor-pointer transition-colors">
-                    Youtube
-                  </li>
-                  <li className="text-xl text-white font-medium hover:text-gray-300 cursor-pointer transition-colors">
-                    Reddit
-                  </li>
-                </ul>
+  <li>
+    <Link
+      href="https://www.instagram.com/zhapindia/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-xl text-white font-medium hover:text-gray-300 transition-colors"
+    >
+      Instagram
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="https://www.youtube.com/@zhapIndia"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-xl text-white font-medium hover:text-gray-300 transition-colors"
+    >
+      YouTube
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="https://www.reddit.com/r/zhapIndia/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-xl text-white font-medium hover:text-gray-300 transition-colors"
+    >
+      Reddit
+    </Link>
+  </li>
+</ul>
               </div>
 
               {/* <div className="flex gap-3 mt-12">
@@ -203,16 +226,16 @@ export default function Navbar() {
             {/* ── COL 3: MILESTONE CARD ── */}
             <div className="bg-[#1c1c1c] rounded-3xl pt-8 flex flex-col items-center text-center relative overflow-hidden md:min-h-[400px] min-h-[350px] opacity-0 translate-y-4">
               <div className="relative z-10 w-full flex flex-col items-center h-full">
-                <div className="flex items-center gap-2 md:mb-12 mb-6">
+                <div className="flex items-center gap-2 md:mb-12 just mb-6">
                   <span className="text-[#888] text-xs font-bold uppercase">
                     Featured
                   </span>
-                  <span className="bg-green-400 text-[#000000] text-[10px] font-bold px-2 py-1 rounded-full">
-                    MILESTONE
-                  </span>
+                  <div className="relative bg-green-400 flex items-center justify-cente py-0.5  text-[#000000] text-[10px] font-bold px-2  rounded-full">
+                    <span className="p-0 m-0 leading-none translate-y-[0.5px]"> MILESTONE</span>
+                  </div>
                 </div>
 
-                <h2 className=" text-2xl md:text-3xl text-white font-medium leading-tight md:mb-8 mb-6">
+                <h2 className=" text-2xl md:text-2xl text-white font-medium leading-tight md:mb-8 mb-6">
                   We hit 300+
                   <br />
                   Creators!

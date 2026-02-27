@@ -19,6 +19,8 @@ const Hero = () => {
   const { days, hours, minutes, seconds } = useCountdown(
     EARLY_ACCESS_TARGET_DATE,
   );
+  const avatars = ["/prof-1.jpg", "/prof-2.jpg", "/prof-3.jpg", "/prof-4.jpg", "/prof-5.jpg"];
+
   return (
     // <div className="relative min-h-screen bg-red-500 w-full flex items-center justify-center overflow-hidden">
     //    {/* <div className="w-full flex items-center justify-center">
@@ -83,15 +85,17 @@ const Hero = () => {
 
         {/* Badge */}
         <div className=" flex justify-center ">
-          <div className="flex items-center gap-2 px-4 py-1 rounded-full bg-white/5 border border-white/10 text-xs tracking-wide text-white/80 backdrop-blur-sm">
+          <div className="flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs tracking-wide text-white/80 backdrop-blur-sm">
             <span className="w-2 h-2 rounded-full  bg-green-400" />
-           <p className="  md:text-xs">LAUNCHING EARLY 2026</p>
+            <p className=" m-0 leading-none text-xs md:text-xs">
+              LAUNCHING EARLY 2026
+            </p>
           </div>
         </div>
 
         {/* Title */}
         <h1
-          className="mt-8 text-4xl md:text-7xl  leading-[1.2] bg-linear-to-br
+          className="mt-8 text-3xl md:text-7xl  leading-[1.2] bg-linear-to-br
   from-white
   via-white/80
   to-white/20
@@ -99,13 +103,14 @@ const Hero = () => {
   font-semibold
   text-transparent"
         >
-          A New Layer for the <br /> Creator Economy
+          A New Era of Content Monetization
         </h1>
 
         {/* Subtitle */}
         <p className="mt-6 md:mt-4 text-white/60 text-sm md:text-lg leading-relaxed">
-          Where you earn based on views, not follower count. Where every post 
-          pays, not just viral ones. Making money from content just got easier.
+          The future where everybody is a creator is here. The creator economy
+           is being rebuilt from the ground up, and making money as a creator 
+           just got easier. Be early to what's next.
         </p>
 
         {/* Countdown */}
@@ -128,20 +133,25 @@ const Hero = () => {
         )}
 
         {/* Email + CTA */}
-        <div className="mt-6 md:mt-6 flex items-center justify-center  p-2">
+        <div className="mt-4 md:mt-6 flex items-center justify-center  p-2">
           <CTA />
         </div>
 
         {/* Social proof avatars */}
-        <div className="mt-2 flex items-center justify-center gap-3">
-          <div className="flex -space-x-3">
-            <div className="w-8 h-8 rounded-full bg-neutral-700 border border-black" />
-            <div className="w-8 h-8 rounded-full bg-neutral-600 border border-black" />
-            <div className="w-8 h-8 rounded-full bg-neutral-500 border border-black" />
-            <div className="w-8 h-8 rounded-full bg-neutral-400 border border-black" />
+        <div className="mt-2 flex flex-col md:flex-row items-center justify-center gap-1 md:gap-3">
+          <div className="flex justify-center -space-x-3">
+            {avatars.map((src, i) => (
+              <div
+                key={i}
+                className="relative w-8 h-8 rounded-full overflow-hidden border border-white/30"
+              >
+                <Image src={src} alt="" fill className="object-cover" />
+              </div>
+            ))}
           </div>
-
-          <p className="text-sm text-white/50">Join 300+ creators</p>
+          <p className="text-sm  text-white/50">
+            Join 300+ creators on the waitlist
+          </p>
         </div>
       </div>
     </section>

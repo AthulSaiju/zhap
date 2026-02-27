@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: "Do I need a large following to join?",
-    a: "Nope! Your follower count doesn't matter at all. We pay you based on views—so whether you've got 20 followers or 200K, you earn the same rates. Everyone starts equal.",
+    a: "Nope! Your follower count doesn't matter at all. We pay you based on views, so whether you've got 20 followers or 2M, you earn the same rates. Everyone starts equal.",
   },
 
   {
@@ -41,7 +41,7 @@ const faqs = [
   //   },
   {
     q: "How much can I realistically earn?",
-    a: " Creators typically earn ₹40k – ₹60k for every 1 million views generated, depending on performance and the campaign. The more you create the more you earn!",
+    a: " Creators typically earn ₹40k – ₹60k for every 1 million approved views, depending on performance and the campaign rates. The more you create the more you earn!",
   },
   {
     q: "How many campaigns can I join?",

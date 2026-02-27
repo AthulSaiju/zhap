@@ -1,4 +1,7 @@
 @import "tailwindcss";
+* {
+  box-sizing: border-box;
+}
 
 :root {
   --background: #ffffff;
@@ -19,6 +22,8 @@
     --foreground: #ededed;
   }
 }
+
+
 
 body {
   background: var(--background);
