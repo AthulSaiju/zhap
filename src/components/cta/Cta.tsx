@@ -46,7 +46,7 @@ export default function CTA({ variant }: CTAProps) {
               tracking-[0.02em]
               cursor-pointer
 
-              bg-gradient-to-b
+              bg-linear-to-b
               from-[#9bf7c2]
               to-[#6ee7b7]
 
@@ -67,7 +67,7 @@ export default function CTA({ variant }: CTAProps) {
             `
         }
       >
-        {isNav ? "Join" : "Join Early Access"}
+        {isNav ? "Join" : "Get Early Access"}
       </button>
 
       {/* Dialog */}

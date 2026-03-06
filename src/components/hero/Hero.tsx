@@ -7,6 +7,7 @@ import { useCountdown } from "@/hooks/useCountdown";
 import { EARLY_ACCESS_TARGET_DATE } from "@/lib/utils";
 import CTA from "../cta/Cta";
 import DarkVeil from "@/common/darkVeil";
+import { Calendar } from "lucide-react";
 
 const Hero = () => {
   const [mounted, setMounted] = useState(false);
@@ -125,10 +126,18 @@ const Hero = () => {
               <span className="text-2xl text-zinc-800 md:text-2xl">|</span>
               <CountdownItem value={seconds} label="Seconds" variant="sm" />
             </div>
+            
+<div className=" flex gap-1">
+  <div>
+    <Calendar className="h-3 w-3 opacity-60"/>
 
-            <p className=" text-[10px] uppercase tracking-widest text-neutral-500">
+  </div>
+            <p className=" text-[10px] uppercase  tracking-wide text-neutral-500">
               Left until Early Access Closes
             </p>
+            
+
+            </div>
           </div>
         )}
 
@@ -150,7 +159,7 @@ const Hero = () => {
             ))}
           </div>
           <p className="text-sm  text-white/50">
-            Join 300+ creators on the waitlist
+            Join 300+ creators on the platform
           </p>
         </div>
       </div>

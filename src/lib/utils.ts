@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 // Early access countdown target date
-export const EARLY_ACCESS_TARGET_DATE = "2026-03-15T12:00:00";
+export const EARLY_ACCESS_TARGET_DATE = "2026-05-05T12:00:00";
 
 
 

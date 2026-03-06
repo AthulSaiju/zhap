@@ -127,8 +127,8 @@ export default function Navbar() {
             <span className="hidden md:block text-sm font-medium ml-1">Menu</span>
           </button>
 
-          <div className=" text-2xl font-bold tracking-widest uppercase">
-            zhap
+          <div className="text-2xl md:text-3xl font-bold tracking-tight uppercase">
+            rudio
           </div>
 
           <CTA variant="nav"/>

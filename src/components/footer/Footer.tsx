@@ -13,7 +13,7 @@ export default function Footer() {
       </div>
 
       <div className="absolute bottom-0 left-0 w-full flex justify-end pr-4 pb-2">
-        <p className=" text-xs text-neutral-500">2026 ZHAP</p>
+        <p className=" text-xs text-neutral-500"> &copy; RUDIO 2026</p>
       </div>
     </div>
   );

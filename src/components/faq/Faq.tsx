@@ -14,7 +14,7 @@ const faqs = [
   //   a: "Zhap is a performance-based content distribution platform where Brands get organic reach at scale, creators get paid for the content they create—tracked transparently, paid fairly.",
   // },
   {
-    q: "How do creators make money on Zhap?",
+    q: "How do creators make money on Rudio?",
     a: "You get paid per view. Join campaigns, create content, post to social media, and earn for every verified view. Tracked automatically, paid weekly via UPI.",
   },
   {
@@ -27,8 +27,8 @@ const faqs = [
   },
 
   {
-    q: "Is Zhap Free to Join?",
-    a: "Absolutely! Zhap is free to join. No membership fees, no upfront costs. We only make money when you do.",
+    q: "Is Rudio Free to Join?",
+    a: "Absolutely! Rudio is free to join. No membership fees, no upfront costs. We only make money when you do.",
   },
   //   {
   //     q: "Can I do this part-time?",
@@ -48,11 +48,11 @@ const faqs = [
     a: "Unlimited! Join as many as you want simultaneously. Most active creators work on multiple campaigns at once to maximize earnings.",
   },
   {
-    q: "What type of campaigns are available on Zhap?",
-    a: "Campaigns from D2C Brands, Startups, Podcasts, Streamers, YouTubers, Local Businesses and many more.",
+    q: "What type of campaigns are available on Rudio?",
+    a: "Campaigns from D2C Brands, Startups, Podcasts, Streamers, YouTubers, Movies, Local Businesses and many more.",
   },
   {
-    q: "Why should I join the waitlist early?",
+    q: "Why should I join the Early Access  ?",
     a: "Early creators get priority access, higher CPM campaigns, and first access to top campaigns when we launch.",
   },
 ];
@@ -133,7 +133,7 @@ export default function Faq() {
 
           <AnimatedText>
             <h2 className="mb-10 md:mb-20 text-3xl text-center font-semibold  md:text-5xl leading-tight">
-              Curious about <span className="text-green-400">ZHAP</span>?
+              Curious about <span className="text-green-400">RUDIO</span>?
               <br />
               We got you covered
             </h2>

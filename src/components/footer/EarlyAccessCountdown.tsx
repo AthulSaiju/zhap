@@ -37,8 +37,7 @@ export default function EarlyAccessCountdown() {
         </h1>
 
         <p className=" max-w-xl text-sm md:text-lg text-neutral-400">
-          Be amongst the first to experience ZHAP. Join the waitlist and get
-          notified when we launch.
+          Be amongst the first to experience RUDIO. Get early access before we open to everyone.
         </p>
       </div>
 
