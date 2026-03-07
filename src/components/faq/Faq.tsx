@@ -121,7 +121,7 @@ export default function Faq() {
   };
 
   return (
-    <div className="w-full  flex flex-col space-y-[10%] items-center py-4 pb-[12%] px-6 md:px-0">
+    <div className="w-full  flex flex-col space-y-[10%] items-center py-4 pb-[12%] px-5 md:px-0">
       <section className="relative  w-[98%] md:w-[60%] mx-auto    text-white">
         {/* Header */}
         <div className="w-full flex flex-col items-center justify-center">
@@ -132,7 +132,7 @@ export default function Faq() {
           </AnimatedText>
 
           <AnimatedText>
-            <h2 className="mb-10 md:mb-20 text-3xl text-center font-semibold  md:text-5xl leading-tight">
+            <h2 className="mb-10  w-full md:mb-20 text-3xl text-center font-semibold  md:text-5xl leading-tight">
               Curious about <span className="text-green-400">RUDIO</span>?
               <br />
               We got you covered

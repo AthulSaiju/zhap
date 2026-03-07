@@ -86,9 +86,9 @@ const Hero = () => {
 
         {/* Badge */}
         <div className=" flex justify-center ">
-          <div className="flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs tracking-wide text-white/80 backdrop-blur-sm">
+          <div className="flex items-center justify-center gap-2 px-4 py-0.5 md:py-1.5 rounded-full bg-white/5 border border-white/10 text-xs tracking-wide text-white/80 backdrop-blur-sm">
             <span className="w-2 h-2 rounded-full  bg-green-400" />
-            <p className=" m-0 leading-none text-xs md:text-xs">
+            <p className=" m-0 max-sm:mt-1  text-xs md:text-xs">
               LAUNCHING EARLY 2026
             </p>
           </div>

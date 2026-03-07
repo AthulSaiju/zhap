@@ -167,52 +167,14 @@ export default function Navbar() {
               <div className="mt-8 flex items-center gap-3 text-xl text-white font-medium">
                 
                 <span className="bg-[#333] text-[#d9d7d7] text-[10px] font-bold px-3 py-2 rounded">
-                 COMING SOON
+                 LAUNCHING SOON
                 </span>
               </div>
             </div>
 
             {/* ── COL 2: EXPLORE & SOCIALS ── */}
             <div className="flex flex-col justify-between p-6 opacity-0 translate-y-4">
-              <div>
-                <h3 className="text-[#888] text-xs font-semibold tracking-wider mb-6">
-                  COMMUNITY
-                </h3>
-                <ul className="space-y-6">
-  <li>
-    <Link
-      href="https://www.instagram.com/zhapindia/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-xl text-white font-medium hover:text-gray-300 transition-colors"
-    >
-      Instagram
-    </Link>
-  </li>
-
-  <li>
-    <Link
-      href="https://www.youtube.com/@zhapIndia"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-xl text-white font-medium hover:text-gray-300 transition-colors"
-    >
-      YouTube
-    </Link>
-  </li>
-
-  <li>
-    <Link
-      href="https://www.reddit.com/r/zhapIndia/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-xl text-white font-medium hover:text-gray-300 transition-colors"
-    >
-      Reddit
-    </Link>
-  </li>
-</ul>
-              </div>
+              
 
               {/* <div className="flex gap-3 mt-12">
                 {[<Linkedin key="l" size={20} />, <Instagram key="i" size={20} />, <Twitter key="t" size={20} />].map((icon, i) => (
@@ -226,12 +188,12 @@ export default function Navbar() {
             {/* ── COL 3: MILESTONE CARD ── */}
             <div className="bg-[#1c1c1c] rounded-3xl pt-8 flex flex-col items-center text-center relative overflow-hidden md:min-h-[400px] min-h-[350px] opacity-0 translate-y-4">
               <div className="relative z-10 w-full flex flex-col items-center h-full">
-                <div className="flex items-center gap-2 md:mb-12 just mb-6">
-                  <span className="text-[#888] text-xs font-bold uppercase">
+                <div className="flex items-center gap-2 md:mb-12 just mb-6 ">
+                  <span className="text-[#888] max-sm:mt-1 text-xs font-bold uppercase">
                     Featured
                   </span>
-                  <div className="relative bg-green-400 flex items-center justify-cente py-0.5  text-[#000000] text-[10px] font-bold px-2  rounded-full">
-                    <span className="p-0 m-0 leading-none translate-y-[0.5px]"> MILESTONE</span>
+                  <div className="relative bg-green-400 flex items-center justify-center md:py-0.5   text-[#000000] text-[12px] font-bold px-2  rounded-full">
+                    <span className="p-0 max-sm:mt-1 leading-none  "> MILESTONE</span>
                   </div>
                 </div>
 
