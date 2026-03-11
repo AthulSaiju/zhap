@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "creator economy",
     "social media monetization",
     "make money online",
-    "make money online in india"
+    "make money online in india",
   ],
 
   robots: {
@@ -103,10 +103,32 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           />
         </div>
 
-        <Navbar/>
+        <Navbar />
 
         {/* <LightRays className="opacity-50" intensity={0.1} /> */}
         <LenisProvider>{children}</LenisProvider>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "WebSite",
+                  name: "Rudio",
+                  url: "https://rudio.in",
+                },
+                {
+                  "@type": "Organization",
+                  name: "Rudio",
+                  url: "https://rudio.in",
+                  logo: "https://rudio.in/icon.png",
+                },
+              ],
+            }),
+          }}
+        />
       </body>
     </html>
   );

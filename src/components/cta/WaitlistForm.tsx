@@ -117,7 +117,7 @@ export default function WaitlistForm() {
           Welcome to the early crew 🚀
         </p>
         <p className="md:text-lg text-base text-neutral-400 max-w-sm">
-          We’ll notify you as soon as Rudio goes live.
+          Early access is rolling out now, you'll hear from us soon.
         </p>
       </div>
     );
