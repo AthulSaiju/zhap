@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import EarlyAccessCountdown from "./EarlyAccessCountdown";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -12,8 +13,18 @@ export default function Footer() {
         <EarlyAccessCountdown />
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full flex justify-end pr-4 pb-2">
-        <p className=" text-xs text-neutral-500"> &copy; RUDIO 2026</p>
+      <div className="absolute text-[9px] md:text-sm text-neutral-500 bottom-0 left-0 w-full gap-4 flex justify-center  pb-2">
+        <a className="" href="mailto:info@rudio.in">Contact</a>
+        <Link href="/privacy">
+  Privacy Policy
+</Link>
+
+<Link href="/terms">
+  Terms of Service
+</Link>
+
+
+        <p className=""> &copy; 2026 RUDIO</p>
       </div>
     </div>
   );
