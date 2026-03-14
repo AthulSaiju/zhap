@@ -13,7 +13,7 @@ export default function Footer() {
         <EarlyAccessCountdown />
       </div>
 
-      <div className="absolute text-[9px] md:text-sm text-neutral-500 bottom-0 left-0 w-full gap-4 flex justify-center  pb-2">
+      <div className="absolute text-[10px] md:text-sm text-neutral-500 bottom-0 left-0 w-full gap-4 flex justify-center  pb-2">
         <a className="" href="mailto:info@rudio.in">Contact</a>
         <Link href="/privacy">
   Privacy Policy
