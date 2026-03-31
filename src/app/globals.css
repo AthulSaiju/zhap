@@ -4,8 +4,8 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #141414;
+    --foreground: #ededed;
   --font-main: "MyFont", sans-serif;
 }
 
@@ -16,12 +16,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #141414;
-    --foreground: #ededed;
-  }
-}
+
 
 
 
