@@ -198,7 +198,7 @@ export default function Navbar() {
                 </div>
 
                 <h2 className=" text-2xl md:text-2xl text-white font-medium leading-tight md:mb-8 mb-6">
-                  We hit 600+
+                  We hit 1200+
                   <br />
                   Creators!
                 </h2>

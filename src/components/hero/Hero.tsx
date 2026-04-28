@@ -159,7 +159,7 @@ const Hero = () => {
             ))}
           </div>
           <p className="text-sm  text-white/50">
-            Join 600+ creators on the platform
+            Join 1200+ creators on the platform
           </p>
         </div>
       </div>
